@@ -9,14 +9,14 @@ $ sudo npm i -g ionic cordova
 
 ```
 
-Then, to run it:
+Then, to run it on ios:
 
 ```bash
 $ ionic cordova platform add ios
 $ ionic cordova run ios
 ```
 
-or
+or on android:
 
 ```bash
 $ ionic cordova platform add android

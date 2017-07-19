@@ -2,10 +2,12 @@ It's a simple todo list for mobile devices
 
 ### How to run with Ionic CLI:
 
-Install ionic and cordova:
+Install ionic, cordova and all dependencies:
 
 ```bash
 $ sudo npm install -g ionic cordova
+$ sudo npm i
+
 ```
 
 Then, to run it:

@@ -9,6 +9,10 @@ $ sudo npm i -g ionic cordova
 
 ```
 
+Install [Android SDK](https://developer.android.com/studio/index.html)
+
+Make sure, that ANDROID_HOME environment variable is setup correct
+
 Then, to run it on ios:
 
 ```bash

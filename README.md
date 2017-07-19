@@ -6,7 +6,6 @@ Install ionic, cordova and all dependencies:
 
 ```bash
 $ sudo npm i -g ionic cordova
-$ sudo npm i
 
 ```
 

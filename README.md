@@ -5,7 +5,7 @@ It's a simple todo list for mobile devices
 Install ionic, cordova and all dependencies:
 
 ```bash
-$ sudo npm install -g ionic cordova
+$ sudo npm i -g ionic cordova
 $ sudo npm i
 
 ```

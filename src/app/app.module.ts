@@ -5,12 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { TodoListPage } from '../pages/todo-list/todo-list';
+import { EditTodoPage } from '../pages/edit-todo/edit-todo';
+import { AddTodoPage } from "../pages/add-todo/add-todo";
+import { TodoItemService } from "../common/services/todoItemService";
+import { TodoListStorage } from "../common/model/todoListStorage";
+import { NativeStorage } from "@ionic-native/native-storage";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    TodoListPage,
+    EditTodoPage,
+    AddTodoPage
   ],
   imports: [
     BrowserModule,
@@ -19,11 +26,16 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    TodoListPage,
+    EditTodoPage,
+    AddTodoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    TodoItemService,
+    TodoListStorage,
+    NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

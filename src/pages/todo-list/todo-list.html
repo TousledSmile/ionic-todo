@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      TODO List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="todo-item"
+            *ngFor="let todoItem of todoList; let i = index"
+            [ngClass]="{'done': todoItem.done}"
+            (click)="!isEditMode ? toggleDone(todoItem) : null">
+
+    <ion-card-content>
+      <div class="todo-content">
+       {{todoItem.id}}: {{todoItem.description}}
+      </div>
+
+      <div class="todo-actions" *ngIf="isEditMode">
+        <button ion-fab mini color="primary" class="edit" (click)="goToEditPage(todoItem)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+
+        <button ion-fab mini class="delete" color="danger" (click)="deleteTodo(todoItem.id)">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="switchEditMode()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab color="secondary" (click)="addTodoItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

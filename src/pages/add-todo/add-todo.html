@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add TODO</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-textarea placeholder="Enter a description" [(ngModel)]="description"></ion-textarea>
+
+  <ion-fab right bottom>
+    <button ion-fab color="secondary" (click)="confirmTodoDescription()">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
